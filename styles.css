@@ -157,6 +157,10 @@ body {
 }
 
 @media (max-width: 1024px) {
+    .mobile-toggle {
+        display: flex;
+    }
+
     .nav-menu {
         position: fixed;
         top: 64px;
@@ -171,6 +175,7 @@ body {
         opacity: 0;
         pointer-events: none;
         transition: all 0.3s ease;
+        z-index: 999;
     }
 
     .nav-menu.active {
@@ -1444,29 +1449,357 @@ body {
     }
 }
 
-@media (max-width: 480px) {
+/* ===================================
+   MOBILE RESPONSIVE (TABLETS)
+   =================================== */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .header {
+        padding: 15px 0;
+    }
+
+    .hero {
+        padding: 100px 0 40px;
+        min-height: 80vh;
+    }
+
     .hero-title {
-        font-size: 48px;
+        font-size: 36px;
+        line-height: 1.3;
     }
 
-    .section-title {
+    .hero-role {
+        font-size: 18px;
+    }
+
+    .hero-tagline {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .content-section {
+        padding: 60px 0;
+    }
+
+    .window {
+        margin-bottom: 20px;
+    }
+
+    .window-content {
+        padding: 25px;
+    }
+
+    .skill-grid {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        gap: 10px;
+    }
+
+    .skill-tag {
+        padding: 8px 12px;
+        font-size: 11px;
+    }
+
+    .social-icons {
+        gap: 15px;
+    }
+
+    .section-header {
         font-size: 28px;
+        margin-bottom: 30px;
     }
 
-    .skills-grid {
+    .featured-grid {
         grid-template-columns: 1fr;
+        gap: 30px;
     }
 
-    .project-title {
-        font-size: 20px;
+    .databank-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
 
-    .contact-link {
+    .contact-window {
+        margin: 0 10px;
+    }
+
+    .contact-form-wrapper {
+        padding: 25px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .submit-btn {
+        width: 100%;
+        padding: 16px;
+    }
+
+    .form-social-icons {
+        gap: 30px;
+    }
+
+    .form-social-link {
+        width: 60px;
+        height: 60px;
+    }
+
+    .form-social-link svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .footer {
+        padding: 40px 0;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+}
+
+/* ===================================
+   MOBILE RESPONSIVE (PHONES)
+   =================================== */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .logo-text {
+        font-size: 12px;
+    }
+
+    .nav-menu {
+        padding: 15px 20px;
+    }
+
+    .hero {
+        padding: 80px 0 30px;
+    }
+
+    .status-badge {
+        font-size: 9px;
+        padding: 6px 12px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    .hero-role {
+        font-size: 16px;
+    }
+
+    .hero-tagline {
+        font-size: 13px;
+        margin-bottom: 30px;
+    }
+
+    .btn {
+        padding: 12px 20px;
+        font-size: 11px;
+    }
+
+    .content-section {
+        padding: 40px 0;
+    }
+
+    .window-header {
+        padding: 12px 15px;
+    }
+
+    .window-title {
+        font-size: 11px;
+    }
+
+    .window-content {
+        padding: 20px;
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .skill-grid {
+        grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+        gap: 8px;
+    }
+
+    .skill-tag {
+        padding: 6px 10px;
+        font-size: 10px;
+    }
+
+    .social-icons {
+        gap: 12px;
+    }
+
+    .social-icons svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .section-header {
+        font-size: 24px;
+        letter-spacing: 2px;
+        margin-bottom: 25px;
+    }
+
+    .featured-card {
         padding: 20px;
     }
 
-    .contact-value {
+    .featured-title {
+        font-size: 16px;
+    }
+
+    .featured-description {
+        font-size: 12px;
+    }
+
+    .tech-tag {
+        font-size: 9px;
+        padding: 4px 8px;
+    }
+
+    .databank-title {
+        font-size: 24px;
+    }
+
+    .databank-subtitle {
+        font-size: 16px;
+    }
+
+    .education-card,
+    .certificate-card {
+        padding: 15px;
+    }
+
+    .education-name,
+    .certificate-name {
         font-size: 14px;
-        word-break: break-word;
+    }
+
+    .education-degree,
+    .certificate-org {
+        font-size: 12px;
+    }
+
+    .contact-title {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .contact-window {
+        margin: 0;
+    }
+
+    .contact-form-wrapper {
+        padding: 20px;
+    }
+
+    .transmit-info {
+        font-size: 11px;
+    }
+
+    .form-label {
+        font-size: 10px;
+    }
+
+    .form-input,
+    .form-textarea {
+        font-size: 13px;
+        padding: 12px;
+    }
+
+    .submit-btn {
+        font-size: 11px;
+        padding: 14px;
+    }
+
+    .form-social-icons {
+        gap: 25px;
+        margin-top: 30px;
+        padding-top: 25px;
+    }
+
+    .form-social-link {
+        width: 55px;
+        height: 55px;
+    }
+
+    .form-social-link svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    .status-window .window-content {
+        padding: 20px;
+    }
+
+    .status-message {
+        font-size: 12px;
+    }
+
+    .footer {
+        padding: 30px 0;
+    }
+
+    .footer-copyright,
+    .footer-info {
+        font-size: 10px;
+    }
+
+    .footer-social svg {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+/* ===================================
+   EXTRA SMALL DEVICES
+   =================================== */
+@media (max-width: 375px) {
+    .hero-title {
+        font-size: 24px;
+    }
+
+    .section-header {
+        font-size: 20px;
+    }
+
+    .form-social-icons {
+        gap: 20px;
+    }
+
+    .form-social-link {
+        width: 50px;
+        height: 50px;
+    }
+
+    .form-social-link svg {
+        width: 20px;
+        height: 20px;
     }
 }
