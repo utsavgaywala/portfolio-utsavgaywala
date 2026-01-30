@@ -141,3 +141,66 @@ if (modulesLink && projectsSection) {
         }
     });
 }
+
+// ===================================
+// CONTACT FORM HANDLING
+// ===================================
+const contactForm = document.getElementById('contact-form');
+const formStatusWindow = document.getElementById('form-status-window');
+const formStatus = document.getElementById('form-status');
+const submitBtn = document.getElementById('submit-btn');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        // Get form data
+        const formData = new FormData(contactForm);
+
+        // Disable submit button and show loading state
+        submitBtn.disabled = true;
+        submitBtn.classList.add('loading');
+
+        // Hide previous status messages
+        formStatusWindow.style.display = 'none';
+        formStatusWindow.className = 'status-window';
+
+        try {
+            // Submit form to Web3Forms
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                // Success
+                formStatus.textContent = '✓ TRANSMISSION SUCCESSFUL! Your message has been received. I will get back to you soon.';
+                formStatusWindow.classList.add('success');
+                formStatusWindow.style.display = 'block';
+
+                // Reset form
+                contactForm.reset();
+
+                // Scroll to status message
+                formStatusWindow.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            } else {
+                // Error
+                formStatus.textContent = '✗ TRANSMISSION FAILED. Please try again or use the direct channels below.';
+                formStatusWindow.classList.add('error');
+                formStatusWindow.style.display = 'block';
+            }
+        } catch (error) {
+            // Network error
+            formStatus.textContent = '✗ CONNECTION ERROR. Please check your internet connection and try again.';
+            formStatusWindow.classList.add('error');
+            formStatusWindow.style.display = 'block';
+        } finally {
+            // Re-enable submit button
+            submitBtn.disabled = false;
+            submitBtn.classList.remove('loading');
+        }
+    });
+}
+
