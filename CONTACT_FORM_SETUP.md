@@ -7,7 +7,7 @@ Follow these simple steps to activate your contact form:
 ### Step 1: Get Your Access Key
 1. Go to https://web3forms.com
 2. Click "Get Started" or "Create Access Key"
-3. Enter your email: **utsavgaywala2004@gmail.com**
+3. Enter your email: **utsavgaywala.work@gmail.com**
 4. Click "Create Access Key"
 5. Copy the access key they provide (it looks like: `a1b2c3d4-e5f6-7g8h-9i0j-k1l2m3n4o5p6`)
 
@@ -29,7 +29,7 @@ Follow these simple steps to activate your contact form:
 4. Click "TRANSMIT_MESSAGE"
 5. You should see animated loading dots
 6. After submission, you'll get a success message
-7. Check your email at **utsavgaywala2004@gmail.com**
+7. Check your email at **utsavgaywala.work@gmail.com**
 
 ## ✨ What You'll See
 

@@ -115,7 +115,7 @@ window.addEventListener('scroll', () => {
 // ===================================
 console.log('%c👋 Hello!', 'font-size: 20px; font-weight: bold; font-family: Space Mono, monospace;');
 console.log('%cInterested in the code? Let\'s connect!', 'font-size: 14px; font-family: Space Mono, monospace;');
-console.log('%cutsavgaywala2004@gmail.com', 'font-size: 14px; color: #525252; font-family: Space Mono, monospace;');
+console.log('%cutsavgaywala.work@gmail.com', 'font-size: 14px; color: #525252; font-family: Space Mono, monospace;');
 
 // ===================================
 // TOGGLE PROJECTS SECTION (MODULES)

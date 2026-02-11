@@ -128,7 +128,7 @@ To customize the portfolio:
 
 ## 📞 Contact Information
 
-- **Email**: utsavgaywala2004@gmail.com
+- **Email**: utsavgaywala.work@gmail.com
 - **Phone**: +91 9328517469
 - **GitHub**: [@utsavgaywala](https://github.com/utsavgaywala)
 
