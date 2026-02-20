@@ -202,6 +202,10 @@ body {
     .skill-grid {
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     }
+
+    .featured-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* ===================================
@@ -519,8 +523,9 @@ body {
 
 .featured-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 40px;
+    align-items: stretch;
 }
 
 .featured-card {
